@@ -18,6 +18,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   PageController _controller = PageController();
 
   bool onLastPage = false;
+  bool noSkipText = false;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +32,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 onLastPage = (index == 2);
               });
             },
+            
             controller: _controller,
             children: [
               IntroPage1(),
@@ -52,12 +54,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade700,
+                      color: _customColors().greyColor,
                       borderRadius: BorderRadius.circular(8)
                     ),
-                    child: Text('Skip', style: TextStyle(color: Colors.white),))),
+                    child: _customTexts().skipText
+                  )
+                ),
 
-                SmoothPageIndicator(controller: _controller, count: _customCounts().pageCount),
+                SmoothPageIndicator(controller: _controller, count: _customCounts().pageCount, effect: ExpandingDotsEffect()),
 
                 onLastPage ?
                 GestureDetector(
@@ -74,10 +78,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade700,
+                      color: _customColors().greyColor,
                       borderRadius: BorderRadius.circular(8)
                     ),
-                    child: Text('Done', style: TextStyle(color: Colors.white),)))
+                    child: _customTexts().doneText
+                   )
+                  )
                   :
                   GestureDetector(
                   onTap:() {
@@ -87,10 +93,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade700,
+                      color: _customColors().greyColor,
                       borderRadius: BorderRadius.circular(8)
                     ),
-                    child: Text('Next', style: TextStyle(color: Colors.white)),
+                    child: _customTexts().nextText,
                   )
                 )
               ],
@@ -106,4 +112,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
 class _customCounts {
   final pageCount = 3;
+}
+
+class _customColors {
+  final greyColor = Colors.grey.shade700;
+}
+
+class _customTexts {
+  final skipText = Text('Skip', style: TextStyle(color: Colors.white));
+  final doneText = Text('Done', style: TextStyle(color: Colors.white));
+  final nextText = Text('Next', style: TextStyle(color: Colors.white));
 }
