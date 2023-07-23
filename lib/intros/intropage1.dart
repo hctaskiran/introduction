@@ -15,16 +15,16 @@ class _IntroPage1State extends State<IntroPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: customBlueColor().blueColor,
+      backgroundColor: customPage1Color().blueColor,
       body: Center(
         child: Column(
           children: [
     
             const SizedBox(height: 200),
     
-            _menuText(),
+            _page1Text(),
     
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
     
             Lottie.network('https://lottie.host/8cf4e7e1-ca15-4f8e-95db-c38da46fde41/ZyR2nfUdkx.json')
     
@@ -35,25 +35,26 @@ class _IntroPage1State extends State<IntroPage1> {
   }
 }
 
-class _menuText extends StatelessWidget {
-  const _menuText({
+class _page1Text extends StatelessWidget {
+  const _page1Text({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
+      pause: Duration(seconds: 30),
       totalRepeatCount: 1,
       animatedTexts: [TyperAnimatedText(
         'Let\'s start from scratch!',
-        textStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: customBlueColor().greyColor)
+        textStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: customPage1Color().whiteColor)
       )],
     );
   }
 }
 
-class customBlueColor {
+class customPage1Color {
   final blueColor = Colors.purple.shade900;
-  final greyColor = Colors.grey.shade400;
+  final whiteColor = Colors.white;
 }
 

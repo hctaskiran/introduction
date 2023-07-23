@@ -6,12 +6,12 @@ class IntroPage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: customOrageColor().orange,
+      color: customPage3Color().orange,
       child: Center(child: Text('PAGE 3')),
     );
   }
 }
 
-class customOrageColor {
+class customPage3Color {
   final orange = Colors.orange.shade600;
 }

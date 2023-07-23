@@ -6,13 +6,13 @@ class IntroPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: customPurpleColor().purple,
+      color: customPage2Color().purple,
       child: Center(child: Text('PAGE 2')),
     );
   }
 }
 
-class customPurpleColor {
+class customPage2Color {
   final purple = Colors.purple.shade400;
 }
 
