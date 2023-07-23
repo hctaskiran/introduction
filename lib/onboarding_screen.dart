@@ -5,6 +5,7 @@ import 'package:introduction_tutorial/intros/intropage3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'home_page.dart';
+import 'intros/intropage0.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -18,7 +19,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   PageController _controller = PageController();
 
   bool onLastPage = false;
-  bool noSkipText = false;
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +29,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           PageView(
             onPageChanged: (index) {
               setState(() {
-                onLastPage = (index == 2);
+                onLastPage = (index == 3);
               });
             },
             
             controller: _controller,
             children: [
+              IntroPage0(),
               IntroPage1(),
               IntroPage2(),
               IntroPage3(),
@@ -42,13 +43,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           ),
 
           Container(
-            alignment: Alignment(0, 0.7),
+            alignment: Alignment(0, 0.8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 GestureDetector(
                   onTap:() {
-                    _controller.jumpToPage(2);
+                    _controller.jumpToPage(3);
                   },
                   child: Container(
                     padding: EdgeInsets.all(10),
@@ -61,13 +62,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   )
                 ),
 
-                SmoothPageIndicator(controller: _controller, count: _customCounts().pageCount, effect: ExpandingDotsEffect()),
+                SmoothPageIndicator(
+                  controller: _controller, 
+                  count: _customCounts().pageCount, 
+                  effect: ExpandingDotsEffect(
+                    dotColor: Colors.white,
+                    activeDotColor: Colors.green
+                  )),
 
                 onLastPage ?
                 GestureDetector(
                   onTap:() {
-                    Navigator.push(
-                      context, 
+                    Navigator.pushReplacement(
+                      context,
                       MaterialPageRoute(builder: (context) {
                         return HomePage();
                       }  
@@ -96,7 +103,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       color: _customColors().greyColor,
                       borderRadius: BorderRadius.circular(8)
                     ),
-                    child: _customTexts().nextText,
+                    child: _customTexts().nextText
                   )
                 )
               ],
@@ -111,7 +118,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
 
 class _customCounts {
-  final pageCount = 3;
+  final pageCount = 4;
 }
 
 class _customColors {
@@ -119,7 +126,7 @@ class _customColors {
 }
 
 class _customTexts {
-  final skipText = Text('Skip', style: TextStyle(color: Colors.white));
-  final doneText = Text('Done', style: TextStyle(color: Colors.white));
-  final nextText = Text('Next', style: TextStyle(color: Colors.white));
+  final skipText = Text('Skip', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold));
+  final doneText = Text('Done', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold));
+  final nextText = Text('Next', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold));
 }
