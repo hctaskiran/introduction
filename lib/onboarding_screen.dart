@@ -48,7 +48,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   onTap:() {
                     _controller.jumpToPage(2);
                   },
-                  child: Text('Skip')),
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade700,
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: Text('Skip', style: TextStyle(color: Colors.white),))),
 
                 SmoothPageIndicator(controller: _controller, count: _customCounts().pageCount),
 
@@ -63,13 +70,29 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                      )
                     );
                   },
-                  child: Text('Done'))
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade700,
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: Text('Done', style: TextStyle(color: Colors.white),)))
                   :
                   GestureDetector(
                   onTap:() {
                     _controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.linear);
                   },
-                  child: Text('Next'))
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade700,
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: Text('Next', style: TextStyle(color: Colors.white)),
+                  )
+                )
               ],
             ),
           )
