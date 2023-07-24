@@ -6,11 +6,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('duck')),
+      appBar: AppBar(
+        title: Text('duck'),
+        backgroundColor: customHomePageColors().greyColor),
+
       body: Center(
         child: Text('Home Page'),
-
-      ) ,
+      ),
     );
   }
+}
+
+class customHomePageColors {
+  final greyColor = Colors.grey.shade800;
 }
