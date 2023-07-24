@@ -13,7 +13,7 @@ Just a simple tutorial menu, especially for the applications that has to be lear
 
 # SCREENSHOTS #
 ![Simulator Screenshot - iPhone 12 Pro - 2023-07-24 at 12 19 09]
-<img src="https://github.com/hctaskiran/introduction_tutorial/assets/98088644/8d8000c0-a261-48f2-918a-61ed205212a4", width="48")
+(https://github.com/hctaskiran/introduction_tutorial/assets/98088644/8d8000c0-a261-48f2-918a-61ed205212a4)
 
 First screen that welcomes you as a hi. You can put a simple friendly message to user at the beginning of the application.
 
