@@ -46,7 +46,7 @@ class _page3Text extends StatelessWidget {
         totalRepeatCount: 1,
         pause: Duration(seconds: 30),
         animatedTexts: [TyperAnimatedText(
-          'Choose one of the activity you like and start!',
+          'Choose one of the activity you like and begin!',
           textStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: customPage3Colors().whiteColor)
         )],
       ),
