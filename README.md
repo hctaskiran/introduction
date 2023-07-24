@@ -12,8 +12,7 @@ Just a simple tutorial menu, especially for the applications that has to be lear
 - Animated icons (lottie)
 
 # SCREENSHOTS #
-![Simulator Screenshot - iPhone 12 Pro - 2023-07-24 at 12 19 09]
-(https://github.com/hctaskiran/introduction_tutorial/assets/98088644/8d8000c0-a261-48f2-918a-61ed205212a4)
+![Simulator Screenshot - iPhone 12 Pro - 2023-07-24 at 12 19 09](https://github.com/hctaskiran/introduction_tutorial/assets/98088644/3cf12fa6-7dd2-4a5b-bb47-fab6add963fa)
 
 First screen that welcomes you as a hi. You can put a simple friendly message to user at the beginning of the application.
 
