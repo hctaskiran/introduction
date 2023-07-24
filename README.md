@@ -21,6 +21,11 @@ First screen that welcomes you as a hi. You can put a simple friendly message to
 
 ![Simulator Screenshot - iPhone 12 Pro - 2023-07-24 at 12 24 47](https://github.com/hctaskiran/introduction_tutorial/assets/98088644/6f5dd532-5c07-45d5-873c-2620d44e95a8)
 
+When you tap on 'Done', it switches to the home page.
+
+![Simulator Screenshot - iPhone 12 Pro - 2023-07-24 at 12 24 51](https://github.com/hctaskiran/introduction_tutorial/assets/98088644/8ed11a5d-65bf-43d4-94ca-aca5662ebe87)
+
+
 
 
 
