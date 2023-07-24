@@ -1,9 +1,7 @@
-# PUBSPEC.YAML #
-dependencies
-  smooth_page_indicator: ^1.1.0
-  animated_text_kit: ^4.2.2
-  lottie: ^2.5.0
-
+# INTRO #
+smooth_page_indicator: ^1.1.0
+animated_text_kit: ^4.2.2
+lottie: ^2.5.0
 
 Just a simple tutorial menu, especially for the applications that has to be learned a small tutorial to express the function of the application.
 
